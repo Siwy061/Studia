@@ -1,0 +1,20 @@
+<div class="todos">
+    <input type="text" name="inputTodo" placeholder="Wpisz produkt.." class="todo-input" [(ngModel)]="inputTodo">
+
+    <input type="number" name="inputTodoCena" placeholder="Podaj Cene.." class="todo-inputCena"
+        [(ngModel)]="inpuTodoCena">
+    <input type="number" class="todo-quanity" placeholder="Podaj Ilosc.." [(ngModel)]="inputTodoQuanity">
+    <input type="submit" value="Dodaj" class="todo-submit" (click)="addTodo()">
+
+
+    <div class="todo" *ngFor="let todo of todos;let i = index;">
+        <div class="id">{{i}}</div>
+        <div class="content">{{todo.content}}</div>
+        <div class="quanity">{{todo.quanity}}szt</div>
+
+        <div class="price">{{todo.price}}zł</div>
+        <button class="delete" (click)="deleteTodo(i)">Usun</button>
+
+    </div>
+    <div class="price">Cena koszyka to: {{sum}} zł</div>
+</div>

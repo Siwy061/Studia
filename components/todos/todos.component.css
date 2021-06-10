@@ -1,0 +1,19 @@
+.todo {
+  display: flex;
+
+}
+
+.todo div {
+  display: flex;
+  padding: 10px;
+  background-color: lightgray;
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+  border-top: solid 1px black;
+}
+
+button {
+  background-color: red;
+  color: white;
+}
+
